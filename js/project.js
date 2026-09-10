@@ -10,3 +10,17 @@ document.querySelector("#project-name").textContent = project.name;
 document.querySelector("#project-description").textContent = project.description;
 document.querySelector("#project-difficulty").textContent = project.difficulty;
 document.querySelector("#project-progress").textContent = project.progress + "%";
+
+const taskList = document.querySelector("#project-tasks");
+
+project.tasks.forEach(function (task) {
+
+    taskList.innerHTML += `
+        <label>
+            <input type="checkbox">
+            ${task}
+        </label>
+        <br>
+    `;
+
+});
