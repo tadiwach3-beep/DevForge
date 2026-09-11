@@ -17,10 +17,11 @@ project.tasks.forEach(function (task) {
 
     taskList.innerHTML += `
         <label>
-            <input type="checkbox">
+            <input type="checkbox" class="task-checkbox">
             ${task}
         </label>
         <br>
     `;
 
 });
+const taskCheckboxes = document.querySelectorAll(".task-checkbox");const progressText = document.querySelector("#project-progress");
