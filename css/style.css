@@ -48,13 +48,18 @@ nav a.active {
 }
 
 .hero {
-    min-height: 80vh;
+    min-height: 88vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 24px;
+    padding: 100px 24px;
     text-align: center;
-    background: #fafafa;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(120, 90, 255, 0.18), transparent 35%),
+        radial-gradient(circle at 80% 30%, rgba(0, 180, 255, 0.16), transparent 35%),
+        #f7f7fb;
 }
 
 .hero-content {
@@ -62,17 +67,25 @@ nav a.active {
 }
 
 .hero-label {
-    font-size: 13px;
+    display: inline-block;
+    padding: 8px 14px;
+    margin-bottom: 28px;
+    border: 1px solid rgba(120, 90, 255, 0.25);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.65);
+    color: #6b4eff;
+    font-size: 12px;
     font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 24px;
+    letter-spacing: 1.5px;
 }
 
 .hero h2 {
-    font-size: clamp(48px, 9vw, 88px);
-    line-height: 1;
-    margin: 0 0 28px;
-    letter-spacing: -3px;
+    max-width: 900px;
+    font-size: clamp(56px, 10vw, 104px);
+    line-height: 0.95;
+    margin: 0 auto 32px;
+    letter-spacing: -5px;
+    font-weight: 800;
 }
 
 .hero-description {
@@ -94,18 +107,36 @@ nav a.active {
 .hero-buttons button {
     background: #111;
     color: white;
-    padding: 14px 26px;
-    border-radius: 8px;
+    padding: 15px 28px;
+    border: 1px solid #111;
+    border-radius: 10px;
     font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.hero-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .hero-buttons a {
     color: #111;
     text-decoration: none;
-    padding: 14px 26px;
+    padding: 15px 28px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.7);
+    transition: 0.2s ease;
+}
+
+.hero-buttons a:hover {
+    transform: translateY(-2px);
+    border-color: #bbb;
+    background: white;
 }
 
 button {
@@ -245,4 +276,124 @@ nav a {
         grid-template-columns: 1fr;
     }
 
+}
+.hero-preview {
+    width: min(900px, 100%);
+    margin: 70px auto 0;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 30px 80px rgba(60, 50, 120, 0.15);
+    backdrop-filter: blur(18px);
+    text-align: left;
+}
+
+.preview-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px 18px;
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.preview-top span:first-child {
+    color: #111;
+    font-size: 15px;
+}
+
+.preview-content {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    min-height: 260px;
+    overflow: hidden;
+    border: 1px solid #e8e8ed;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.preview-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 16px;
+    border-right: 1px solid #eee;
+    background: #fafafa;
+}
+
+.preview-sidebar span {
+    padding: 9px 10px;
+    border-radius: 7px;
+    color: #777;
+    font-size: 13px;
+}
+
+.preview-sidebar span:first-child {
+    background: #eeeaff;
+    color: #6b4eff;
+    font-weight: 600;
+}
+
+.preview-main {
+    padding: 32px;
+}
+
+.preview-label {
+    margin: 0 0 8px;
+    color: #777;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.preview-main h3 {
+    margin: 0 0 24px;
+    font-size: 28px;
+    letter-spacing: -1px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #eee;
+}
+
+.progress-bar div {
+    width: 68%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #6b4eff, #00b4ff);
+}
+
+.preview-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.preview-stats div {
+    padding: 18px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background: #fafafa;
+}
+
+.preview-stats strong,
+.preview-stats span {
+    display: block;
+}
+
+.preview-stats strong {
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.preview-stats span {
+    color: #777;
+    font-size: 12px;
 }
