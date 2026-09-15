@@ -1,3 +1,12 @@
+/* ================================================================
+   DEVFORGE GLOBAL STYLES
+   ================================================================ */
+
+
+/* ================================================================
+   1. GLOBAL STYLES
+   ================================================================ */
+
 * {
     box-sizing: border-box;
 }
@@ -6,6 +15,11 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
+
+/* ================================================================
+   2. NAVIGATION
+   ================================================================ */
 
 header {
     display: flex;
@@ -47,6 +61,11 @@ nav a.active {
     background: #f0f0f0;
 }
 
+
+/* ================================================================
+   3. HERO SECTION
+   ================================================================ */
+
 .hero {
     min-height: 88vh;
     display: flex;
@@ -56,9 +75,18 @@ nav a.active {
     text-align: center;
     position: relative;
     overflow: hidden;
+
     background:
-        radial-gradient(circle at 20% 20%, rgba(120, 90, 255, 0.18), transparent 35%),
-        radial-gradient(circle at 80% 30%, rgba(0, 180, 255, 0.16), transparent 35%),
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(120, 90, 255, 0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(0, 180, 255, 0.16),
+            transparent 35%
+        ),
         #f7f7fb;
 }
 
@@ -95,6 +123,11 @@ nav a.active {
     line-height: 1.6;
     color: #555;
 }
+
+
+/* ================================================================
+   4. HERO BUTTONS
+   ================================================================ */
 
 .hero-buttons {
     display: flex;
@@ -139,11 +172,19 @@ nav a.active {
     background: white;
 }
 
+
+/* General button defaults */
+
 button {
     padding: 12px 24px;
     border: none;
     cursor: pointer;
 }
+
+
+/* ================================================================
+   5. PROJECTS
+   ================================================================ */
 
 .projects {
     padding: 60px 40px;
@@ -181,68 +222,12 @@ button {
 .project-card button {
     margin-top: 10px;
 }
-@media (max-width: 700px) {
 
-    header {
-    padding: 18px 20px;
-}
 
-    .waitlist {
-        padding: 90px 20px;
-    }
+/* ================================================================
+   6. FEATURED PROJECTS
+   ================================================================ */
 
-    .waitlist h2 {
-        letter-spacing: -2px;
-    }
-
-    .waitlist-form {
-        flex-direction: column;
-        padding: 8px;
-    }
-
-    .waitlist-form input {
-        width: 100%;
-        padding: 14px;
-    }
-
-    .waitlist-form button {
-        width: 100%;
-    }
-
-    .waitlist-form {
-    grid-template-columns: 1fr;
-}
-
-.waitlist-form button {
-    grid-column: auto;
-}
-
-header h1 {
-    font-size: 21px;
-}
-
-nav {
-    gap: 14px;
-}
-
-nav a {
-    font-size: 14px;
-}
-
-    .hero {
-        min-height: 75vh;
-        padding: 60px 20px;
-    }
-
-    .hero h2 {
-        letter-spacing: -2px;
-    }
-
-    .hero-description {
-        font-size: 17px;
-    }
-
-}
 .featured-projects {
     padding: 100px 40px;
     max-width: 1100px;
@@ -296,17 +281,12 @@ nav a {
     font-weight: 600;
     text-decoration: none;
 }
-@media (max-width: 700px) {
 
-    .featured-projects {
-        padding: 70px 20px;
-    }
 
-    .featured-grid {
-        grid-template-columns: 1fr;
-    }
+/* ================================================================
+   7. DASHBOARD PREVIEW
+   ================================================================ */
 
-}
 .hero-preview {
     width: min(900px, 100%);
     margin: 70px auto 0;
@@ -384,6 +364,9 @@ nav a {
     letter-spacing: -1px;
 }
 
+
+/* Dashboard progress bar */
+
 .progress-bar {
     width: 100%;
     height: 8px;
@@ -398,6 +381,9 @@ nav a {
     border-radius: inherit;
     background: linear-gradient(90deg, #6b4eff, #00b4ff);
 }
+
+
+/* Dashboard statistics */
 
 .preview-stats {
     display: grid;
@@ -428,12 +414,26 @@ nav a {
     font-size: 12px;
 }
 
+
+/* ================================================================
+   8. WAITLIST
+   ================================================================ */
+
 .waitlist {
     padding: 120px 24px;
     margin-top: 40px;
+
     background:
-        radial-gradient(circle at 20% 50%, rgba(120, 90, 255, 0.2), transparent 35%),
-        radial-gradient(circle at 80% 50%, rgba(0, 180, 255, 0.18), transparent 35%),
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(120, 90, 255, 0.2),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(0, 180, 255, 0.18),
+            transparent 35%
+        ),
         #111;
 }
 
@@ -468,6 +468,9 @@ nav a {
     line-height: 1.6;
 }
 
+
+/* Waitlist form */
+
 .waitlist-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -479,6 +482,9 @@ nav a {
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.08);
 }
+
+
+/* Waitlist inputs */
 
 .waitlist-form input,
 .waitlist-form select {
@@ -500,6 +506,9 @@ nav a {
     color: #777;
 }
 
+
+/* Waitlist submit button */
+
 .waitlist-form button {
     grid-column: 1 / -1;
     padding: 14px 20px;
@@ -508,26 +517,334 @@ nav a {
     color: #111;
     font-size: 14px;
     font-weight: 700;
+    transition: 0.2s ease;
 }
 
 .waitlist-form button:hover {
     transform: translateY(-1px);
 }
 
-.waitlist-form input::placeholder {
-    color: #777;
-}
 
-.waitlist-form button {
-    padding: 14px 20px;
-    border-radius: 9px;
-    background: white;
-    color: #111;
-    font-size: 14px;
-    font-weight: 700;
-}
+/* Privacy message */
 
 .waitlist small {
     color: #666;
     font-size: 12px;
+}
+
+
+/* ================================================================
+   9. WAITLIST SUCCESS MODAL
+   ================================================================ */
+
+
+/* Dark background covering the website */
+
+.success-modal {
+    display: flex;
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+/* Show modal */
+
+.success-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Confirmation card */
+
+.success-modal-content {
+    width: min(440px, 100%);
+
+    padding: 42px 32px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+
+    background: white;
+
+    text-align: center;
+
+    transform: translateY(20px) scale(0.95);
+
+    transition:
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Card animation */
+
+.success-modal.show .success-modal-content {
+    transform: translateY(0) scale(1);
+}
+
+
+/* Success icon */
+
+.success-icon {
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto 24px;
+}
+
+.success-icon svg {
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+}
+
+
+/* Success circle */
+
+.success-icon circle {
+    fill: #f0edff;
+    stroke: #6b4eff;
+    stroke-width: 2;
+}
+
+
+/* Success checkmark */
+
+.success-icon path {
+    fill: none;
+
+    stroke: #6b4eff;
+    stroke-width: 3.5;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+}
+
+
+/* Animate checkmark */
+
+.success-modal.show .success-icon path {
+    animation:
+        success-check 0.5s ease 0.2s forwards;
+}
+
+
+/* Checkmark animation */
+
+@keyframes success-check {
+
+    from {
+        stroke-dashoffset: 50;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+
+}
+
+
+/* Modal heading */
+
+.success-modal-content h2 {
+    margin: 0 0 12px;
+
+    color: #111;
+
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+
+/* Modal description */
+
+.success-modal-content p {
+    margin: 0 auto 28px;
+
+    max-width: 340px;
+
+    color: #666;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* Continue button */
+
+.success-modal-content button {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #111;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.success-modal-content button:hover {
+    transform: translateY(-2px);
+    background: #292929;
+}
+
+.success-modal-content button:active {
+    transform: translateY(0);
+}
+
+
+/* ================================================================
+   10. MOBILE RESPONSIVE DESIGN
+   ================================================================ */
+
+@media (max-width: 700px) {
+
+    /* Header */
+
+    header {
+        padding: 18px 20px;
+    }
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 75vh;
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 17px;
+    }
+
+
+    /* Featured projects */
+
+    .featured-projects {
+        padding: 70px 20px;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Waitlist */
+
+    .waitlist {
+        padding: 90px 20px;
+    }
+
+    .waitlist h2 {
+        letter-spacing: -2px;
+    }
+
+    .waitlist-form {
+        grid-template-columns: 1fr;
+        padding: 8px;
+    }
+
+    .waitlist-form input,
+    .waitlist-form select {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .waitlist-form button {
+        width: 100%;
+        grid-column: auto;
+    }
+
+
+    /* Dashboard preview */
+
+    .preview-content {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-sidebar {
+        display: none;
+    }
+
+    .preview-main {
+        padding: 24px;
+    }
+
+    .preview-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Success modal */
+
+    .success-modal {
+        padding: 20px;
+    }
+
+    .success-modal-content {
+        padding: 36px 24px;
+        border-radius: 20px;
+    }
+
+    .success-modal-content h2 {
+        font-size: 25px;
+    }
+
+    .success-modal-content p {
+        font-size: 14px;
+    }
+
 }

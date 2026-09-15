@@ -1,197 +1,585 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--
+        PAGE SETUP
+        These settings control how the browser understands the page.
+        Changing the viewport can affect how the site behaves on phones.
+    -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- Browser tab title -->
     <title>DevForge</title>
 
+    <!-- Main DevForge stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 
 <body>
 
+
+    <!-- =========================================================
+         NAVIGATION
+         Controls the top navigation shown across the website.
+         ========================================================= -->
+
     <header>
+
+        <!-- DevForge brand name -->
         <h1>DevForge</h1>
 
+        <!-- Main website navigation -->
         <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="#">Challenges</a>
+
+            <!-- Current page -->
+            <a href="index.html" class="active">
+                Home
+            </a>
+
+            <!-- Projects page -->
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <!-- Challenges page - not built yet -->
+            <a href="#">
+                Challenges
+            </a>
+
         </nav>
+
     </header>
+
 
     <main>
 
+
+        <!-- =========================================================
+             HERO SECTION
+             The first major section visitors see.
+             ========================================================= -->
+
         <section class="hero">
 
-    <div class="hero-content">
+            <div class="hero-content">
 
-        <p class="hero-label">THE DEVELOPER BUILDING PLATFORM</p>
 
-        <h2>Learn. Build. Prove.</h2>
+                <!-- Small label above the main heading -->
 
-        <p class="hero-description">
-            Build real projects, develop practical coding skills,
-            and create work you can actually show.
-        </p>
+                <p class="hero-label">
+                    THE DEVELOPER BUILDING PLATFORM
+                </p>
 
-        <div class="hero-preview">
 
-    <div class="preview-top">
-        <span>DevForge</span>
-        <span>Developer Dashboard</span>
-    </div>
+                <!-- Main DevForge headline -->
 
-    <div class="preview-content">
+                <h2>
+                    Learn. Build. Prove.
+                </h2>
 
-        <div class="preview-sidebar">
-            <span>Overview</span>
-            <span>Projects</span>
-            <span>Challenges</span>
-            <span>Skills</span>
-        </div>
 
-        <div class="preview-main">
+                <!-- Main description -->
 
-            <p class="preview-label">YOUR PROGRESS</p>
+                <p class="hero-description">
+                    Build real projects, develop practical coding skills,
+                    and create work you can actually show.
+                </p>
 
-            <h3>Build. Learn. Improve.</h3>
 
-            <div class="progress-bar">
-                <div></div>
+                <!-- =====================================================
+                     DASHBOARD PREVIEW
+                     Visual preview of the future DevForge platform.
+                     ===================================================== -->
+
+                <div class="hero-preview">
+
+
+                    <!-- Preview header -->
+
+                    <div class="preview-top">
+
+                        <span>
+                            DevForge
+                        </span>
+
+                        <span>
+                            Developer Dashboard
+                        </span>
+
+                    </div>
+
+
+                    <!-- Preview dashboard content -->
+
+                    <div class="preview-content">
+
+
+                        <!-- Dashboard sidebar -->
+
+                        <div class="preview-sidebar">
+
+                            <span>
+                                Overview
+                            </span>
+
+                            <span>
+                                Projects
+                            </span>
+
+                            <span>
+                                Challenges
+                            </span>
+
+                            <span>
+                                Skills
+                            </span>
+
+                        </div>
+
+
+                        <!-- Main dashboard preview -->
+
+                        <div class="preview-main">
+
+                            <p class="preview-label">
+                                YOUR PROGRESS
+                            </p>
+
+                            <h3>
+                                Build. Learn. Improve.
+                            </h3>
+
+
+                            <!-- Example progress bar -->
+
+                            <div class="progress-bar">
+
+                                <div></div>
+
+                            </div>
+
+
+                            <!-- Example dashboard statistics -->
+
+                            <div class="preview-stats">
+
+                                <div>
+
+                                    <strong>
+                                        3
+                                    </strong>
+
+                                    <span>
+                                        Projects
+                                    </span>
+
+                                </div>
+
+
+                                <div>
+
+                                    <strong>
+                                        12
+                                    </strong>
+
+                                    <span>
+                                        Tasks
+                                    </span>
+
+                                </div>
+
+
+                                <div>
+
+                                    <strong>
+                                        68%
+                                    </strong>
+
+                                    <span>
+                                        Progress
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="preview-stats">
-                <div>
-                    <strong>3</strong>
-                    <span>Projects</span>
-                </div>
+        </section>
 
-                <div>
-                    <strong>12</strong>
-                    <span>Tasks</span>
-                </div>
 
-                <div>
-                    <strong>68%</strong>
-                    <span>Progress</span>
-                </div>
+        <!-- =========================================================
+             FEATURED PROJECTS
+             Shows example projects users can build.
+             ========================================================= -->
+
+        <section class="featured-projects">
+
+
+            <!-- Section heading -->
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    FEATURED PROJECTS
+                </p>
+
+                <h2>
+                    Projects that turn practice into proof.
+                </h2>
+
             </div>
 
-        </div>
 
-    </div>
+            <!-- Project cards -->
 
-</div>
+            <div class="featured-grid">
 
-    </div>
 
-</section>
-<section class="featured-projects">
+                <!-- PROJECT 1 -->
 
-    <div class="section-heading">
-        <p class="section-label">FEATURED PROJECTS</p>
+                <div class="featured-card">
 
-        <h2>Projects that turn practice into proof.</h2>
-    </div>
+                    <span>
+                        BEGINNER
+                    </span>
 
-    <div class="featured-grid">
+                    <h3>
+                        Build Your First Website
+                    </h3>
 
-        <div class="featured-card">
-            <span>BEGINNER</span>
-            <h3>Build Your First Website</h3>
-            <p>
-                Create a responsive website using HTML and CSS.
-            </p>
-            <a href="project.html?id=website">View Project →</a>
-        </div>
+                    <p>
+                        Create a responsive website using HTML and CSS.
+                    </p>
 
-        <div class="featured-card">
-            <span>BEGINNER</span>
-            <h3>Build a Calculator</h3>
-            <p>
-                Create a working calculator using HTML, CSS and JavaScript.
-            </p>
-            <a href="project.html?id=calculator">View Project →</a>
-        </div>
+                    <a href="project.html?id=website">
+                        View Project →
+                    </a>
 
-        <div class="featured-card">
-            <span>BEGINNER</span>
-            <h3>Build a To-Do App</h3>
-            <p>
-                Create an interactive to-do list using JavaScript.
-            </p>
-            <a href="project.html?id=to-do">View Project →</a>
-        </div>
+                </div>
 
-    </div>
 
-    <div class="featured-action">
-        <a href="projects.html">Explore All Projects →</a>
-    </div>
+                <!-- PROJECT 2 -->
 
-</section>
+                <div class="featured-card">
+
+                    <span>
+                        BEGINNER
+                    </span>
+
+                    <h3>
+                        Build a Calculator
+                    </h3>
+
+                    <p>
+                        Create a working calculator using HTML, CSS
+                        and JavaScript.
+                    </p>
+
+                    <a href="project.html?id=calculator">
+                        View Project →
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="featured-card">
+
+                    <span>
+                        BEGINNER
+                    </span>
+
+                    <h3>
+                        Build a To-Do App
+                    </h3>
+
+                    <p>
+                        Create an interactive to-do list using JavaScript.
+                    </p>
+
+                    <a href="project.html?id=to-do">
+                        View Project →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Link to all projects -->
+
+            <div class="featured-action">
+
+                <a href="projects.html">
+                    Explore All Projects →
+                </a>
+
+            </div>
+
+        </section>
+
     </main>
 
-<section class="waitlist">
 
-    <div class="waitlist-content">
+    <!-- =============================================================
+         WAITLIST SECTION
 
-        <p class="section-label">GET EARLY ACCESS</p>
+         This is where visitors register their interest in DevForge.
 
-        <h2>Be the first in line.</h2>
+         Data flow:
 
-        <p>
-            DevForge is being built for the next generation of developers.
-            Join our waitlist to be the first to know when we launch!
-        </p>
+         Form
+            ↓
+         js/app.js
+            ↓
+         Convex
+            ↓
+         Database
+         ============================================================= -->
 
-       <form class="waitlist-form">
+    <section class="waitlist">
 
-    <form class="waitlist-form">
+        <div class="waitlist-content">
 
-    <input
-        type="text"
-        id="name"
-        placeholder="Your name"
-        required
+
+            <!-- Waitlist section label -->
+
+            <p class="section-label">
+                GET EARLY ACCESS
+            </p>
+
+
+            <!-- Waitlist headline -->
+
+            <h2>
+                Be the first in line.
+            </h2>
+
+
+            <!-- Waitlist explanation -->
+
+            <p>
+                DevForge is being built for the next generation of developers.
+                Join our waitlist to be the first to know when we launch!
+            </p>
+
+
+            <!-- =========================================================
+                 WAITLIST FORM
+
+                 JavaScript listens for this exact form.
+                 Do not add another form inside it.
+                 ========================================================= -->
+
+            <form class="waitlist-form">
+
+
+                <!-- User name -->
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your name"
+                    required
+                >
+
+
+                <!-- User email -->
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your email"
+                    required
+                >
+
+
+                <!-- Optional WhatsApp number -->
+
+                <input
+                    type="tel"
+                    id="whatsapp"
+                    placeholder="WhatsApp number (optional)"
+                >
+
+
+                <!-- Learning interest -->
+
+                <select
+                    id="interest"
+                    required
+                >
+
+                    <option value="">
+                        What do you want to learn?
+                    </option>
+
+                    <option value="web-development">
+                        Web Development
+                    </option>
+
+                    <option value="software-development">
+                        Software Development
+                    </option>
+
+                    <option value="cybersecurity">
+                        Cybersecurity
+                    </option>
+
+                    <option value="other">
+                        Something else
+                    </option>
+
+                </select>
+
+
+                <!-- Submit button -->
+
+                <button type="submit">
+                    Join Waitlist
+                </button>
+
+
+            </form>
+
+
+            <!-- Privacy message -->
+
+            <small>
+                No spam. Just DevForge launch updates.
+            </small>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =============================================================
+         WAITLIST SUCCESS MODAL
+
+         This starts hidden.
+
+         JavaScript adds the "show" class after Convex successfully
+         saves the user's waitlist information.
+
+         CSS then handles the animation.
+         ============================================================= -->
+
+    <div
+        class="success-modal"
+        id="success-modal"
     >
 
-    <input
-        type="email"
-        id="email"
-        placeholder="Your email"
-        required
-    >
 
-    <input
-        type="tel"
-        id="whatsapp"
-        placeholder="WhatsApp number (optional)"
-    >
+        <!-- Modal content box -->
 
-    <select id="interest" required>
-        <option value="">What do you want to learn?</option>
-        <option value="web-development">Web Development</option>
-        <option value="software-development">Software Development</option>
-        <option value="cybersecurity">Cybersecurity</option>
-        <option value="other">Something else</option>
-    </select>
+        <div class="success-modal-content">
 
-    <button type="submit">Join Waitlist</button>
 
-</form>
-        <small>
-            No spam. Just DevForge launch updates.
-        </small>
+            <!-- =====================================================
+                 SUCCESS ICON
+                 CSS animates the checkmark when the modal opens.
+                 ===================================================== -->
+
+            <div class="success-icon">
+
+                <svg
+                    viewBox="0 0 52 52"
+                    aria-hidden="true"
+                >
+
+                    <!-- Circle around the checkmark -->
+
+                    <circle
+                        cx="26"
+                        cy="26"
+                        r="25"
+                    />
+
+
+                    <!-- Checkmark -->
+
+                    <path
+                        d="M14 27l8 8 16-18"
+                    />
+
+                </svg>
+
+            </div>
+
+
+            <!-- Main confirmation message -->
+
+            <h2>
+                You're officially on the waitlist.
+            </h2>
+
+
+            <!-- Supporting confirmation message -->
+
+            <p>
+                Thanks for joining DevForge. We'll let you know when it's
+                time to start building.
+            </p>
+
+
+            <!-- Closes the confirmation modal -->
+
+            <button id="success-close">
+                Continue
+            </button>
+
+
+        </div>
 
     </div>
 
-</section>
 
-<script src="https://unpkg.com/convex@1.45.0/dist/browser.bundle.js"></script>
-<script src="js/app.js"></script>
+    <!-- =============================================================
+         JAVASCRIPT
+
+         Convex:
+         Loads the Convex browser library.
+
+         app.js:
+         Handles the waitlist form and communicates with Convex.
+
+         IMPORTANT:
+         Convex MUST load before app.js.
+         ============================================================= -->
+
+
+    <!-- Convex browser library -->
+
+    <script src="https://unpkg.com/convex@1.45.0/dist/browser.bundle.js"></script>
+
+
+    <!-- DevForge application JavaScript -->
+
+    <script src="js/app.js"></script>
+
+
 </body>
+
 </html>
