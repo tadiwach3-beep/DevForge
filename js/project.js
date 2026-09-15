@@ -7,19 +7,15 @@
    1. Finds the selected project from the URL
    2. Displays the project information
    3. Creates the project task list
-   4. Tracks completed tasks
-   5. Calculates project progress
+   4. Loads saved task progress
+   5. Tracks completed tasks
+   6. Saves progress when tasks change
+   7. Calculates project progress
    ================================================================ */
 
 
 /* ================================================================
    1. GET PROJECT ID
-   ----------------------------------------------------------------
-   Example URL:
-
-   project.html?id=website
-
-   The code below gets "website" from the URL.
    ================================================================ */
 
 const params =
@@ -31,9 +27,6 @@ const projectId =
 
 /* ================================================================
    2. FIND THE PROJECT
-   ----------------------------------------------------------------
-   We search the projects array from projects.js and find the
-   project whose ID matches the ID in the URL.
    ================================================================ */
 
 const project =
@@ -68,8 +61,6 @@ const taskList =
 
 /* ================================================================
    5. CREATE THE TASK CHECKBOXES
-   ----------------------------------------------------------------
-   Every task in projects.js becomes a checkbox on the page.
    ================================================================ */
 
 project.tasks.forEach(function (task) {
@@ -93,8 +84,6 @@ project.tasks.forEach(function (task) {
 
 /* ================================================================
    6. FIND THE CHECKBOXES
-   ----------------------------------------------------------------
-   Now that the checkboxes have been created, we can find them.
    ================================================================ */
 
 const taskCheckboxes =
@@ -110,14 +99,46 @@ const progressText =
 
 
 /* ================================================================
-   8. UPDATE PROJECT PROGRESS
+   8. LOAD SAVED PROGRESS
    ----------------------------------------------------------------
-   This function counts how many tasks are completed and converts
-   that number into a percentage.
+   localStorage remembers information in the browser.
 
-   Example:
+   We use the project ID as part of the storage key so each
+   project gets its own saved progress.
+   ================================================================ */
 
-   1 completed ÷ 3 total × 100 = 33%
+const savedProgress =
+    localStorage.getItem(
+        "devforge-" + projectId
+    );
+
+
+/* ================================================================
+   9. RESTORE SAVED TASKS
+   ----------------------------------------------------------------
+   If the learner has previously completed tasks, restore those
+   checkbox states.
+   ================================================================ */
+
+if (savedProgress) {
+
+    const completedTasks =
+        JSON.parse(savedProgress);
+
+    taskCheckboxes.forEach(function (checkbox, index) {
+
+        checkbox.checked =
+            completedTasks[index] === true;
+
+    });
+
+}
+
+
+/* ================================================================
+   10. UPDATE PROJECT PROGRESS
+   ----------------------------------------------------------------
+   Counts completed tasks and converts them into a percentage.
    ================================================================ */
 
 function updateProgress() {
@@ -151,14 +172,36 @@ function updateProgress() {
     progressText.textContent =
         progress + "%";
 
+
+    /* ============================================================
+       SAVE PROGRESS
+       ------------------------------------------------------------
+       Convert the checkbox states into an array and save them.
+       ============================================================ */
+
+    const taskStates =
+        Array.from(taskCheckboxes).map(
+            function (checkbox) {
+
+                return checkbox.checked;
+
+            }
+        );
+
+
+    localStorage.setItem(
+        "devforge-" + projectId,
+        JSON.stringify(taskStates)
+    );
+
 }
 
 
 /* ================================================================
-   9. LISTEN FOR TASK CHANGES
+   11. LISTEN FOR TASK CHANGES
    ----------------------------------------------------------------
-   Whenever a learner checks or unchecks a task, recalculate the
-   project progress.
+   Whenever a checkbox changes, save the progress and update the
+   percentage.
    ================================================================ */
 
 taskCheckboxes.forEach(function (checkbox) {
@@ -172,9 +215,9 @@ taskCheckboxes.forEach(function (checkbox) {
 
 
 /* ================================================================
-   10. INITIAL PROGRESS
+   12. INITIAL PROGRESS
    ----------------------------------------------------------------
-   Calculate the progress when the page first loads.
+   Calculate progress after loading any saved task states.
    ================================================================ */
 
 updateProgress();
