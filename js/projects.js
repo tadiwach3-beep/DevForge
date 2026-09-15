@@ -43,23 +43,29 @@ tasks: [
 
 
 const projectList = document.querySelector("#project-list");
-projects.forEach(function (project) {
 
-    projectList.innerHTML += `
-        <div class="project-card">
+if (projectList) {
 
-            <h3>${project.name}</h3>
+    projects.forEach(function (project) {
 
-            <p>${project.description}</p>
+        projectList.innerHTML += `
+            <div class="project-card">
 
-            <span>${project.difficulty}</span>
+                <h3>${project.name}</h3>
 
-            <p>Progress: ${project.progress}%</p>
+                <p>${project.description}</p>
 
-            <a href="project.html?id=${project.id}">
-    <button>View Project</button>
-</a>
-        </div>
-    `;
+                <span>${project.difficulty}</span>
 
-});
+                <p>Progress: ${project.progress}%</p>
+
+                <a href="project.html?id=${project.id}">
+                    <button>View Project</button>
+                </a>
+
+            </div>
+        `;
+
+    });
+
+}
