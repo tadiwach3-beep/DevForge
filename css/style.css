@@ -848,3 +848,32 @@ button {
     }
 
 }
+/* ================================================================
+   PROJECT PROGRESS BAR
+   ================================================================ */
+
+.project-progress-container {
+    max-width: 600px;
+    margin: 12px 0 30px;
+}
+
+.project-progress-bar {
+    width: 100%;
+    height: 10px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #eee;
+}
+
+.project-progress-bar div {
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #6b4eff, #00b4ff);
+    transition: width 0.4s ease;
+}
+
+#project-progress {
+    margin-top: 10px;
+    font-weight: 600;
+}

@@ -97,6 +97,9 @@ const taskCheckboxes =
 const progressText =
     document.querySelector("#project-progress");
 
+const progressFill =
+    document.querySelector("#project-progress-fill");
+
 
 /* ================================================================
    8. LOAD SAVED PROGRESS
@@ -172,6 +175,10 @@ function updateProgress() {
     progressText.textContent =
         progress + "%";
 
+    /* Update visual progress bar */
+
+    progressFill.style.width =
+    progress + "%";
 
     /* ============================================================
        SAVE PROGRESS
