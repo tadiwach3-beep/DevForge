@@ -47,23 +47,79 @@ const projectList = document.querySelector("#project-list");
 if (projectList) {
 
     projects.forEach(function (project) {
+            const savedProgress =
+        localStorage.getItem(
+            "devforge-" + project.id
+        );
+
+    let projectProgress = 0;
+
+    if (savedProgress) {
+
+        const completedTasks =
+            JSON.parse(savedProgress);
+
+        const completedCount =
+            completedTasks.filter(
+                function (completed) {
+                    return completed === true;
+                }
+            ).length;
+
+        projectProgress =
+            Math.round(
+                (completedCount / project.tasks.length) * 100
+            );
+
+    }
 
         projectList.innerHTML += `
-            <div class="project-card">
+         <div class="project-card">
 
-                <h3>${project.name}</h3>
+            <div class="project-card-top">
 
-                <p>${project.description}</p>
+                <span class="project-difficulty">
+                ${project.difficulty}
+            </span>
 
-                <span>${project.difficulty}</span>
+        </div>
 
-                <p>Progress: ${project.progress}%</p>
+        <h3>${project.name}</h3>
 
-                <a href="project.html?id=${project.id}">
-                    <button>View Project</button>
-                </a>
+        <p class="project-description">
+            ${project.description}
+        </p>
+
+        <div class="project-card-progress">
+
+            <div class="progress-info">
+
+                <span>Progress</span>
+
+                    <strong>
+                    ${projectProgress}%
+                    </strong>
 
             </div>
+
+            <div class="project-card-progress-bar">
+
+                <div
+                    style="width: ${projectProgress}%"
+                ></div>
+
+            </div>
+
+        </div>
+
+        <a
+            href="project.html?id=${project.id}"
+            class="project-button"
+        >
+            View Project →
+        </a>
+
+    </div>
         `;
 
     });

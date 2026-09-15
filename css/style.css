@@ -205,23 +205,7 @@ button {
     max-width: 500px;
 }
 
-.project-card h3 {
-    font-size: 24px;
-    margin-top: 0;
-}
 
-.project-card span {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 6px 12px;
-    border-radius: 20px;
-    background: #eee;
-    font-size: 14px;
-}
-
-.project-card button {
-    margin-top: 10px;
-}
 
 
 /* ================================================================
@@ -876,4 +860,217 @@ button {
 #project-progress {
     margin-top: 10px;
     font-weight: 600;
+}
+
+/* ================================================================
+   DEVFORGE ADMIN DASHBOARD
+   ================================================================ */
+
+
+/* ================================================================
+   ADMIN DASHBOARD
+   ================================================================ */
+
+.admin-dashboard {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+
+/* ================================================================
+   ADMIN HEADER
+   ================================================================ */
+
+.admin-header {
+    margin-bottom: 50px;
+}
+
+.admin-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #6b4eff;
+}
+
+.admin-header h2 {
+    margin: 0 0 10px;
+    font-size: 42px;
+}
+
+.admin-header p {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+}
+
+
+/* ================================================================
+   ADMIN SECTIONS
+   ================================================================ */
+
+.admin-section {
+    margin-bottom: 50px;
+}
+
+.admin-section-heading {
+    margin-bottom: 20px;
+}
+
+.admin-section-heading h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+
+/* ================================================================
+   OVERVIEW STAT CARDS
+   ================================================================ */
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.admin-stat-card {
+    padding: 24px;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+.admin-stat-card span {
+    display: block;
+    margin-bottom: 12px;
+    color: #666;
+    font-size: 14px;
+}
+
+.admin-stat-card strong {
+    display: block;
+    font-size: 30px;
+}
+
+
+/* ================================================================
+   RECENT ACTIVITY
+   ================================================================ */
+
+.admin-activity {
+    padding: 24px;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+.admin-activity p {
+    margin: 0;
+    color: #777;
+}
+
+
+/* ================================================================
+   PROJECT PERFORMANCE
+   ================================================================ */
+
+.admin-projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.admin-project-card {
+    padding: 24px;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+.admin-project-card span {
+    display: block;
+    margin-bottom: 12px;
+    color: #666;
+    font-size: 14px;
+}
+
+.admin-project-card strong {
+    font-size: 22px;
+}
+
+
+/* ================================================================
+   REPORTS
+   ================================================================ */
+
+.admin-reports {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.admin-report-card {
+    padding: 24px;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+.admin-report-card span {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.admin-report-card strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.admin-report-card p {
+    margin: 0;
+    color: #777;
+    line-height: 1.5;
+}
+
+
+/* ================================================================
+   MOBILE
+   ================================================================ */
+
+@media (max-width: 800px) {
+
+    .admin-dashboard {
+        padding: 40px 20px;
+    }
+
+    .admin-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .admin-projects {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-reports {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-header h2 {
+        font-size: 34px;
+    }
+
 }
