@@ -17,120 +17,390 @@
         href="css/style.css"
     >
 
+    <link
+        rel="stylesheet"
+        href="css/admin.css"
+    >
 </head>
 
-<body>
 
-    <header>
+<body class="admin-page">
 
-        <h1>DevForge</h1>
 
-        <nav>
+    <!-- =========================================================
+         SIDEBAR
+         ========================================================= -->
 
-            <a href="index.html">
-                Home
+    <aside class="admin-sidebar">
+
+        <div class="admin-brand">
+
+            <div class="admin-brand-icon">
+                D
+            </div>
+
+            <span>
+                DevForge
+            </span>
+
+        </div>
+
+
+        <nav class="admin-nav">
+
+            <a
+                href="admin.html"
+                class="admin-nav-item active"
+            >
+                <span>◷</span>
+                Dashboard
             </a>
 
-            <a href="projects.html">
+            <a
+                href="#analytics"
+                class="admin-nav-item"
+            >
+                <span>▥</span>
+                Analytics
+            </a>
+
+            <a
+                href="#learners"
+                class="admin-nav-item"
+            >
+                <span>♙</span>
+                Learners
+            </a>
+
+            <a
+                href="#projects"
+                class="admin-nav-item"
+            >
+                <span>▦</span>
                 Projects
             </a>
 
-            <a href="admin.html" class="active">
-                Admin
+            <a
+                href="#activity"
+                class="admin-nav-item"
+            >
+                <span>◌</span>
+                Activity
             </a>
 
         </nav>
 
-    </header>
+
+        <div class="admin-sidebar-bottom">
+
+            <a
+                href="index.html"
+                class="admin-nav-item"
+            >
+                <span>←</span>
+                Back to site
+            </a>
+
+        </div>
+
+    </aside>
 
 
-    <main>
 
-        <section class="admin-dashboard">
+    <!-- =========================================================
+         MAIN DASHBOARD
+         ========================================================= -->
 
-            <div class="admin-header">
+    <main class="admin-main">
 
-                <div>
 
-                    <span class="admin-label">
-                        DEVFORGE ADMIN
+        <!-- =====================================================
+             TOP BAR
+             ===================================================== -->
+
+        <header class="admin-topbar">
+
+            <div class="admin-search">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    placeholder="Search"
+                >
+
+            </div>
+
+
+            <div class="admin-topbar-actions">
+
+                <button
+                    class="admin-icon-button"
+                    type="button"
+                >
+                    ⚙
+                </button>
+
+                <button
+                    class="admin-icon-button"
+                    type="button"
+                >
+                    ♧
+                </button>
+
+                <div class="admin-avatar">
+                    T
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             DASHBOARD HEADER
+             ===================================================== -->
+
+        <section class="admin-dashboard-header">
+
+            <div>
+
+                <span class="admin-label">
+                    DEVFORGE ADMIN
+                </span>
+
+                <h1>
+                    Hello, Tadiwa 👋
+                </h1>
+
+                <p>
+                    Here's what's happening on your platform.
+                </p>
+
+            </div>
+
+
+            <button
+                class="admin-period-button"
+                type="button"
+            >
+                This month
+                <span>⌄</span>
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             OVERVIEW CARDS
+             ===================================================== -->
+
+        <section class="admin-overview">
+
+            <div class="admin-stat-card featured">
+
+                <div class="admin-stat-top">
+
+                    <span>
+                        Total waitlist
                     </span>
 
-                    <h2>
-                        Dashboard
-                    </h2>
+                    <span class="admin-stat-arrow">
+                        ↗
+                    </span>
 
-                    <p>
-                        Monitor your platform, learners and growth.
-                    </p>
+                </div>
+
+                <strong id="admin-total-waitlist">
+                    0
+                </strong>
+
+                <small>
+                    People interested in DevForge
+                </small>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-top">
+
+                    <span>
+                        New this week
+                    </span>
+
+                    <span class="admin-stat-arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+                <strong id="admin-weekly-signups">
+                    0
+                </strong>
+
+                <small>
+                    New waitlist signups
+                </small>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-top">
+
+                    <span>
+                        New this month
+                    </span>
+
+                    <span class="admin-stat-arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+                <strong id="admin-monthly-signups">
+                    0
+                </strong>
+
+                <small>
+                    New waitlist signups
+                </small>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-top">
+
+                    <span>
+                        Top interest
+                    </span>
+
+                    <span class="admin-stat-arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+                <strong
+                    id="admin-top-interest"
+                    class="admin-interest-value"
+                >
+                    —
+                </strong>
+
+                <small>
+                    Most requested learning area
+                </small>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ANALYTICS AREA
+             ===================================================== -->
+
+        <section
+            class="admin-content-grid"
+            id="analytics"
+        >
+
+
+            <!-- WAITLIST CHART -->
+
+            <div class="admin-panel admin-chart-panel">
+
+                <div class="admin-panel-header">
+
+                    <div>
+
+                        <h2>
+                            Waitlist growth
+                        </h2>
+
+                        <span>
+                            Track your platform growth
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="admin-round-button"
+                        type="button"
+                    >
+                        ↗
+                    </button>
+
+                </div>
+
+
+                <div class="admin-chart-placeholder">
+
+                    <div class="chart-message">
+
+                        <strong>
+                            Analytics coming next
+                        </strong>
+
+                        <span>
+                            DevForge will track page views,
+                            project activity and learner growth here.
+                        </span>
+
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <section class="admin-section">
 
-                <div class="admin-section-heading">
 
-                    <h3>
-                        Overview
-                    </h3>
+            <!-- LEARNERS -->
+
+            <section
+                class="admin-panel admin-learners-panel"
+                id="learners"
+            >
+
+                <div class="admin-panel-header">
+
+                    <div>
+
+                        <h2>Learners</h2>
+
+                        <span>People who joined the DevForge waitlist</span>
+
+                        <div class="admin-learners-search">
+
+                            <input
+                                type="search"
+                                id="admin-learners-search"
+                                placeholder="Search learners..."
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+                    </div>
 
                 </div>
 
+                <div class="admin-learners-list" id="admin-learners-list">
 
-                <div class="admin-stats">
-
-                    <div class="admin-stat-card">
-
-                        <span>
-                            Total Waitlist
-                        </span>
-
-                        <strong id="admin-total-waitlist">
-                            0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="admin-stat-card">
-
-                        <span>
-                            New This Week
-                        </span>
-
-                        <strong id="admin-weekly-signups">
-                            0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="admin-stat-card">
-
-                        <span>
-                            New This Month
-                        </span>
-
-                        <strong id="admin-monthly-signups">
-                            0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="admin-stat-card">
-
-                        <span>
-                            Top Interest
-                        </span>
-
-                        <strong id="admin-top-interest">
-                            —
-                        </strong>
-
+                    <div class="admin-empty-state">
+                        <div class="admin-empty-icon">♙</div>
+                        <strong>Loading learners...</strong>
+                        <span>Getting the latest waitlist signups.</span>
                     </div>
 
                 </div>
@@ -138,13 +408,33 @@
             </section>
 
 
-            <section class="admin-section">
+            <!-- ACTIVITY -->
 
-                <div class="admin-section-heading">
+            <div
+                class="admin-panel"
+                id="activity"
+            >
 
-                    <h3>
-                        Recent Activity
-                    </h3>
+                <div class="admin-panel-header">
+
+                    <div>
+
+                        <h2>
+                            Recent activity
+                        </h2>
+
+                        <span>
+                            Latest platform events
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="admin-round-button"
+                        type="button"
+                    >
+                        ↗
+                    </button>
 
                 </div>
 
@@ -154,124 +444,199 @@
                     id="admin-activity"
                 >
 
-                    <p>
-                        No activity yet.
-                    </p>
+                    <div class="admin-empty-state">
 
-                </div>
-
-            </section>
-
-
-            <section class="admin-section">
-
-                <div class="admin-section-heading">
-
-                    <h3>
-                        Project Performance
-                    </h3>
-
-                </div>
-
-
-                <div class="admin-projects">
-
-                    <div class="admin-project-card">
-
-                        <span>
-                            Most Viewed
-                        </span>
-
-                        <strong id="admin-most-viewed">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                    <div class="admin-project-card">
-
-                        <span>
-                            Most Started
-                        </span>
-
-                        <strong id="admin-most-started">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                    <div class="admin-project-card">
-
-                        <span>
-                            Completion Rate
-                        </span>
-
-                        <strong id="admin-completion-rate">
-                            0%
-                        </strong>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <section class="admin-section">
-
-                <div class="admin-section-heading">
-
-                    <h3>
-                        Reports
-                    </h3>
-
-                </div>
-
-
-                <div class="admin-reports">
-
-                    <div class="admin-report-card">
-
-                        <span>
-                            Weekly Report
-                        </span>
+                        <div class="admin-empty-icon">
+                            ◌
+                        </div>
 
                         <strong>
-                            Coming soon
+                            No activity yet
                         </strong>
-
-                        <p>
-                            Your weekly DevForge activity summary.
-                        </p>
-
-                    </div>
-
-
-                    <div class="admin-report-card">
 
                         <span>
-                            Monthly Report
+                            Activity will appear here
+                            as people use DevForge.
                         </span>
-
-                        <strong>
-                            Coming soon
-                        </strong>
-
-                        <p>
-                            Your monthly DevForge growth summary.
-                        </p>
 
                     </div>
 
                 </div>
 
-            </section>
+            </div>
 
         </section>
 
+
+
+        <!-- =====================================================
+             PROJECT PERFORMANCE
+             ===================================================== -->
+
+        <section
+            class="admin-panel admin-project-panel"
+            id="projects"
+        >
+
+            <div class="admin-panel-header">
+
+                <div>
+
+                    <h2>
+                        Project performance
+                    </h2>
+
+                    <span>
+                        See how learners interact with projects
+                    </span>
+
+                </div>
+
+                <button
+                    class="admin-period-button small"
+                    type="button"
+                >
+                    View projects
+                    <span>→</span>
+                </button>
+
+            </div>
+
+
+            <div class="admin-project-metrics">
+
+
+                <div class="admin-project-metric">
+
+                    <span>
+                        Most viewed
+                    </span>
+
+                    <strong id="admin-most-viewed">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="admin-project-metric">
+
+                    <span>
+                        Most started
+                    </span>
+
+                    <strong id="admin-most-started">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="admin-project-metric">
+
+                    <span>
+                        Completion rate
+                    </span>
+
+                    <strong id="admin-completion-rate">
+                        0%
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             REPORTS
+             ===================================================== -->
+
+        <section class="admin-reports-section">
+
+            <div class="admin-panel-header">
+
+                <div>
+
+                    <h2>
+                        Reports
+                    </h2>
+
+                    <span>
+                        Your DevForge growth summaries
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-report-grid">
+
+
+                <div class="admin-report-card">
+
+                    <div class="admin-report-icon">
+                        7D
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Weekly report
+                        </span>
+
+                        <strong>
+                            Coming soon
+                        </strong>
+
+                        <p>
+                            Weekly signups, activity and
+                            project engagement.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-report-card">
+
+                    <div class="admin-report-icon">
+                        30D
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Monthly report
+                        </span>
+
+                        <strong>
+                            Coming soon
+                        </strong>
+
+                        <p>
+                            Monthly growth and learner
+                            behaviour summary.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
     </main>
+
+
 
     <!-- =========================================================
          CONVEX
@@ -279,14 +644,7 @@
 
     <script src="https://unpkg.com/convex@1.45.0/dist/browser.bundle.js"></script>
 
-
-    <!-- =========================================================
-         ADMIN JAVASCRIPT
-         ========================================================= -->
-
     <script src="js/admin.js"></script>
-
-<script src="https://unpkg.com/convex@1.45.0/dist/browser.bundle.js"></script>
 
 
 </body>

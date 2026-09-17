@@ -66,6 +66,13 @@ waitlistForm.addEventListener(
 
         /* Prevent the browser from refreshing the page */
         event.preventDefault();
+        const submitButton =
+    waitlistForm.querySelector("button");
+
+submitButton.disabled = true;
+
+submitButton.innerHTML =
+    '<span class="button-spinner"></span> Joining waitlist...';
 
 
         /* --------------------------------------------------------
@@ -133,6 +140,11 @@ waitlistForm.addEventListener(
                 error
             );
 
+          submitButton.disabled = false;
+
+submitButton.innerHTML =
+    "Join Waitlist";
+          
             alert(
                 "Something went wrong. Please try again."
             );
